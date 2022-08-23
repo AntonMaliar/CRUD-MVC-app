@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Profile</title>
+</head>
+<body>
+	<p th:text="${user.getName()}">name</p>
+	<p th:text="${user.getSurname()}">surname</p>
+	<a th:href="@{/formForUpdate/{id}(id=${user.getId()})}">Update</a>
+	<br>
+	<a th:href="@{/deleteUser?(id=${user.getId()}) }">Delete</a>
+	<br>
+	<a href="index.jsp">Welcome page</a>
+</body>
+</html>

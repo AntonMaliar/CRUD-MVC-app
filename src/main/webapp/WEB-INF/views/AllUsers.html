@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>All Users</title>
+<style type="text/css">
+	div {
+		border:1px solid black;
+		width: 10cm;
+}
+</style>
+</head>
+<body>
+	<div th:each="user : ${users}">
+		<p th:text="${user.getName()}">user name</p>
+		<p th:text="${user.getSurname()}">user surname</p>
+		<a th:href="@{user/{id}(id=${user.getId()})}">Open</a>
+	</div>
+	<a href="index.jsp">Welcome page</a>
+</body>
+</html>
